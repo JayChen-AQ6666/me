@@ -13,16 +13,18 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ['what', 'does', 'this', 'line', 'do', '?']
 
+# I think this will find word in some_words
 for word in some_words:
-    print(word)
+    print(word) #it printed "word"
 
 for x in some_words:
     print(x)
 
 print(some_words)
 
+# I think this will count how many words in some_words.
 if len(some_words) > 3:
-    print('some_words contains more than 3 words')
+    print('some_words contains more than 3 words') # After counting the number of the some_word it print "some_word contains more than 3 words"
 
 def usefulFunction():
     """
