@@ -108,8 +108,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-   
-    return None
+    number = []
+    for i in range(10):
+        row = []
+        for [] in range(10):
+            row.append(str(i))
+        number.append(row)
+    return number
 
 
 def loops_4():
@@ -129,8 +134,16 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    square = []
+    for [] in range(10):
+        numberrow = []
+        for i in range(10):
+            numberrow.append(str(i))
+        square.append(numberrow)
+    print(square)
+    return(square)
 
+   
 
 def loops_5():
     """Make the coordinates of the block.
@@ -156,7 +169,14 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    numbersqure = []
+    for [] in range(10):
+        coordinates_row = []
+        for j in range(5):
+            coordinates_row.append('(i{}, j{})'.format([],j))
+        numbersqure.append(coordinates_row)
+    print(numbersqure)
+    return numbersqure 
 
 
 def loops_6():
@@ -178,8 +198,14 @@ def loops_6():
     You don't have to use a literal number in the range function.
     You can use a variable.
     TIP: look out for the starting condition.
-    """
-    return None
+    """"""
+    wedge = i
+    for i in range(10):
+        row = i
+        for j in range(i)
+            row.append(j)
+        wedge.append(row)
+    return wedge"""
 
 
 def loops_7():
@@ -203,8 +229,18 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
-
+    pyramid = []
+    
+    for [] in range(5):
+        rows = []
+        for j in range(9):
+            if abs(j-4) <= []:
+                rows.append('*')
+            else:
+                rows.append(' ')
+            pyramid.append(rows)
+    print(pyramid)
+    return(pyramid)
 
 def lp(some_kind_of_list, exercise_name):
     """Help to see what's going on.
