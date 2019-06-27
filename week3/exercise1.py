@@ -96,7 +96,7 @@ def super_asker(low, high):
     message = "Show me a number between{}, and {}".format(low,high)
     while True:
         try:
-            input = int(raw_input(message))
+            input = int(input(message))
             if low < input < high:
                 print("Thanks!{}". format(input))
                 return input
