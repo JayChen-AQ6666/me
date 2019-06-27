@@ -69,7 +69,19 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    fifth =  False
+    while fifth is False:
+        fifth = True
+        input = (message)
+        try:
+            input = int(input)
+        except Exception:
+            try:
+                input = float(input)
+            except Exception:
+                fifth = False
+            
+    return fifth
 
 
 def super_asker(low, high):
@@ -80,7 +92,19 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    """
+    message = "Show me a number between{}, and {}".format(low,high)
+    while True:
+        try:
+            input = int(raw_input(message))
+            if low < input < high:
+                print("Thanks!{}". format(input))
+                return input
+            else:
+                print("{input} is not between {low}, and {high}".format(input=input, low=low, high=high))
+        except Exception as n:
+            print("please try again({})".format(n))
+    """
 
 
 if __name__ == "__main__":
