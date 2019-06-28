@@ -92,11 +92,11 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    """
+    
     message = "Show me a number between{}, and {}".format(low,high)
     while True:
         try:
-            input = int(input(message))
+            input = int(message)
             if low < input < high:
                 print("Thanks!{}". format(input))
                 return input
@@ -104,7 +104,7 @@ def super_asker(low, high):
                 print("{input} is not between {low}, and {high}".format(input=input, low=low, high=high))
         except Exception as n:
             print("please try again({})".format(n))
-    """
+    
 
 
 if __name__ == "__main__":

@@ -25,51 +25,51 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
-    """
+    
 
 
-      check = False
+check = False
 
-      lower = not("enter the lower bound")
-      while check is False:
-        try:
-          upper = int(raw_input("enter the upper bound"))
-          if upper > (lower+1):
-            print("you need to guess" + 
-                  "between {} and {}".format(lower, upper))
-            check = True
-          elif upper == (lower+1):
-            print("numbers too close")
-          else:
-            print("{} is not higher than {}, try again".format(upper, lower))
+lower = not("enter the lower bound")
+while check is False:
+    try:
+        upper = int(raw_input("enter the upper bound"))
+        if upper > (lower+1):
+          print("you need to guess" + 
+                "between {} and {}".format(lower, upper))
+          check = True
+        elif upper == (lower+1):
+          print("numbers too close")
+        else:
+          print("{} is not higher than {}, try again".format(upper, lower))
       
-        except:
-          print("not an integer")
+    except:
+      print("not an integer")
 
 
-      actual = random.randint(lower, upper)
-      guessed = False
+actual = random.randint(lower, upper)
+guessed = False
 
-      while not guessed:
-        try:
-          guessed == int(raw_input("have a guess: "))
-          if guessed == actual:
+while not guessed:
+  try:
+      guessed == int(raw_input("have a guess: "))
+      if guessed == actual:
             print("{} was the answer!".format(actual))
             guessed = True
-          elif guessed <= lower:
+      elif guessed <= lower:
             print("no, {} is too low to be valid".format(guessed))
-          elif guessed >= upper :
+      elif guessed >= upper :
             print("no, {} is too high to be valid".format(guessed))
-          elif guessed > actual:
+      elif guessed > actual:
             print("guess lower!")
-          elif guessed < actual:
+      elif guessed < actual:
             print("guess higher!")
-        except:
+  except:
           print("not an integer")
 
-      return "You got it!"
+ 
     # the tests are looking for the exact string "You got it!". Don't modify that!
-"""
+
 
 if __name__ == "__main__":
     print(advancedGuessingGame())
