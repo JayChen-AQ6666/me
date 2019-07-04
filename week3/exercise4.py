@@ -41,10 +41,6 @@ def binary_search(low, high, actual_number):
             l = guess
         print(guess)
         tries += 1
-
-
-    
-
     return {"guess": guess, "tries": tries}
 
 
