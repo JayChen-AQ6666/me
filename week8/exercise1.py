@@ -129,7 +129,7 @@ def make_filler_text_dictionary():
     TIP: you'll need the requests library
     """
   import requests
-    URL = "http://www.setgetgo.com/randomword/get.php?len="
+    URL = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=18"
     my_dictionary = {}
     for i in range(3):
         url = URL + str(i)
