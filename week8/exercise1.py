@@ -45,7 +45,7 @@ def fizz_buzz():
     fizzBuzzList = []
     # your code here
     for num in range(1, 100):
-        if num % 3 == 0 and i % 5 == 0:
+        if num % 3 == 0 and num % 5 == 0:
             fizzBuzzList.append("FizzBuzz")
         elif num % 3 == 0:
             fizzBuzzList.append("Fizz")
@@ -124,25 +124,22 @@ def make_filler_text_dictionary():
     }
     Use the API to get the 3 words.
     
-    The dictionary should have the numbers between 3 and 7 inclusive.
+    The dictionary should have the numbers between 3 and 7 inclusive.5
     (i.e. 3, 4, 5, 6, 7 and 3 words for each)
     TIP: you'll need the requests library
     """
-  import requests
-    URL = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=18"
-    my_dictionary = {}
-    for i in range(3):
-        url = URL + str(i)
-        response = requests.get(url)
-        message = response.text
-        word_list = []
-        word_list.append(message)
-        for j in range(3, 8):
-            my_dictionary[i] = word_list
-    return my_dictionary
+    import requests
+    randDict = {}
+    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=18"
+    for i in range(3, 8):
+        words = []
+        for x in (0, 2, 1):
+            dictUrl = url + str(i)
+            word = requests.get(dictUrl)
+            words.append(word.text)
+        randDict[i] = words
+    return randDict
     
-
-    return {}
 
 
 def random_filler_text(number_of_words=200):
