@@ -142,7 +142,12 @@ def diarist():
          the test will have nothing to look at.
     TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
-    pass
+    gcode_data= open(LOCAL + "/Trispokedovetiles(laser).gcode").read()
+    count = gcode_data.count("M10 P1")
+    f = open("week4/lasers.pew", "w+")
+    f.write(str(count))
+    f.close
+
 
 
 if __name__ == "__main__":
