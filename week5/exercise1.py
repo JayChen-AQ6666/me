@@ -208,7 +208,15 @@ def get_a_word_of_length_n(length):
 
 
 def list_of_words_with_lengths(list_of_lengths):
-    pass
+    length = len(list_of_lengths)
+    Dict = {}
+    ListOfWord = []
+    for i in range(length):
+        length = int(length)
+        VariableElement = list_of_lengths[i]
+        Dict["word"] = "b"*VariableElement
+        ListOfWord.append(Dict['word'])
+    return ListOfWord
 
 
 if __name__ == "__main__":

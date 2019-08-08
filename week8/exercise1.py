@@ -94,7 +94,7 @@ def pet_filter(letter="a"):
 
 def best_letter_for_pets():
     """Return the letter that is present at least once in the most pet names.
-    Reusing the pet_filter, find the letter that gives the longest list of pets
+    Reusing the pet_filter, find the letter that gives the longest list of pets5
     TIP: return just a letter, not the list of animals.
     """
     import string
@@ -172,6 +172,8 @@ def fast_filler(number_of_words=200):
     If you get this one to work, you are a Very Good Programmer™!
     """
     import json
+
+
 
 
     return paragraph
