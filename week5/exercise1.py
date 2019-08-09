@@ -14,7 +14,7 @@ Some functions will have directions as external comments, once you think you
 are on top of it, take these comments out. Others won't have comments and
 you'll need to figure out for yourself what to do.
 """
-
+import math
 
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
@@ -30,6 +30,8 @@ def do_bunch_of_bad_things():
     print("Getting ready to start in 2")
     print("Getting ready to start in 1")
     print("Let's go!")
+
+    import math
 
     triangle = {"base": 3, "height": 4}
     triangle["hypotenuse"] = triangle["base"] ** 2 + triangle["height"] ** 2

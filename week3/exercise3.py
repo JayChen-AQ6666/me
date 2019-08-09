@@ -31,7 +31,7 @@ def advancedGuessingGame():
     lowerbound = int(10)
     upperbound = int(20)
 
-    actualNumber = random.randint(lowerbound, upperbound)
+    actualNumber = random.randint(lowerbound,upperbound)
 
 
 
