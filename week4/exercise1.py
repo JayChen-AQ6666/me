@@ -148,6 +148,7 @@ def diarist():
     f.write(str(count))
     f.close
 
+    
 
 
 if __name__ == "__main__":

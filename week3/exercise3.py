@@ -25,48 +25,72 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
-    
+    print("\nWelcome to the guessing game!")
+    print("A number between _ and _ ?")
+
+    lowerbound = int(10)
+    upperbound = int(20)
+
+    actualNumber = random.randint(lowerbound, upperbound)
 
 
-check = False
 
-lower = not("enter the lower bound")
-while check is False:
-    try:
-        upper = int(raw_input("enter the upper bound"))
-        if upper > (lower+1):
-          print("you need to guess" + 
-                "between {} and {}".format(lower, upper))
-          check = True
-        elif upper == (lower+1):
-          print("numbers too close")
-        else:
-          print("{} is not higher than {}, try again".format(upper, lower))
-      
-    except:
-      print("not an integer")
+    bs = False
+    while bs == False:
+        preanswer1 = False
+        while preanswer1 != True:
+            lowerBound = input("Enter an lower bound: ")
+            try:
+                int(lowerBound)
+                preanswer1 = True
+            except ValueError:
+                print("Only whole number is accepted!")
+                preanswer1 = False
+        preanswer2 = False
+        while preanswer2 != True:
+            upperBound = input("Enter an upper bound: ")
+            if upperBound > lowerBound:
+                try:
+                    int(upperBound)
+                    bs = True
+                    preanswer2 = True
+                except ValueError:
+                    print("Only whole number is accepted!")
+                    upperBound = input("Enter an upper bound: ")
+                    preanswer2 = False
+            else:
+                print("The upperbound can not be smaller or equal to the lowerbound!")
+                preanswer2 = False
+        print("OK then, a number between " + str(lowerBound) + " and " + str(upperBound) + ".")
 
+    upperBound = int(upperBound)
+    lowerBound = int(lowerBound)
+    actualNumber = random.randint(lowerBound+1, upperBound)
 
-actual = random.randint(lower, upper)
-guessed = False
-
-while not guessed:
-  try:
-      guessed == int(raw_input("have a guess: "))
-      if guessed == actual:
-            print("{} was the answer!".format(actual))
+    guessed = False
+    while not guessed:
+        answer = False
+        while answer != True:
+          guessedNumber = input("Guess a number: ")
+          try:
+              int(guessedNumber)
+              answer = True
+          except ValueError:
+              answer = False
+              print("Only whole number is accepted!")
+        print("You guessed {},".format(guessedNumber),)
+        if int(guessedNumber) == actualNumber:
+            print("You got it!! It was {}".format(actualNumber))
             guessed = True
-      elif guessed <= lower:
-            print("no, {} is too low to be valid".format(guessed))
-      elif guessed >= upper :
-            print("no, {} is too high to be valid".format(guessed))
-      elif guessed > actual:
-            print("guess lower!")
-      elif guessed < actual:
-            print("guess higher!")
-  except:
-          print("not an integer")
-
+        elif int(guessedNumber) < actualNumber and int(guessedNumber) > lowerBound:
+            print("Too small, try again :'(")
+        elif int(guessedNumber) > actualNumber and int(guessedNumber) < upperBound:
+            print("Too big, try again :'(")
+        elif int(guessedNumber) > upperBound:
+            print("Your guess is not even within your range!\nIt is way to big, it should be lower than " + str(upperBound) + ". Try again :' ")
+        elif int(guessedNumber) <= lowerBound:
+            print("Your guess is not even within your range!\nIt is way to small, it should be bigger than " + str(lowerBound) + ". Try again :' ")
+    return "You got it!"
  
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
